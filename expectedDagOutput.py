@@ -42,3 +42,9 @@ for filename in os.listdir(importedDagsPath):
                     dag=globals()[filename[:-3]]
                 )
                 # TODO: Implement dependencies
+# Dependencies for dag1
+printHello >> printBye << printGreetings
+# Dependencies for dag2
+printA >> addThenPrint
+
+
